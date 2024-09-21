@@ -14,9 +14,9 @@ let leftLiftcalls = [];
 
 submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  floorCount = floorInput.value;
-  liftCount = liftInput.value;
-  if (floorCount <= 1  || liftCount <= 1) {
+  floorCount = parseInt(floorInput.value);
+  liftCount = parseInt(liftInput.value);
+  if (floorCount <= 0  || liftCount <= 0) {
     return alert("Invalid Input, Please Try Again!!");
   }
 
