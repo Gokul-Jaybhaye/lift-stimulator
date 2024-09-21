@@ -11,11 +11,12 @@ let floorCount = null,
   liftCount = null;
 let leftLiftcalls = [];
 
+
 submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
   floorCount = floorInput.value;
   liftCount = liftInput.value;
-  if (floorCount <= 0 || liftCount <= 0) {
+  if (floorCount <= 1 && floorCount>=1 || liftCount <= 1) {
     return alert("Invalid Input, Please Try Again!!");
   }
 
@@ -41,7 +42,7 @@ function handleFloor(totalFloors) {
       .addEventListener("click", (e) => handleLiftCall(e));
     floorMaping.set(`floor-${totalFloors}`, null);
     outputSection.appendChild(topFloor);
-    for (let i = totalFloors - 1; i > 0; i--) {
+    for (let i = totalFloors-1; i > 0; i--) {
         const middleFloors = document.createElement("section");
         middleFloors.className = "floor";
         middleFloors.id = `floor-${i}`;
@@ -88,9 +89,10 @@ function handleLift(totalLifts) {
         <section class="door left-door"></section>
         <section class="door right-door"></section>
       `;
-      liftMaping.set(`lift-${i}`, 0);
+      liftMaping.set(`lift-${i}`, 1);
       checkAvailability.set(`lift-${i}`, true);
       groundFloor.appendChild(currentLift);
+      
     }
   }
   
@@ -135,7 +137,7 @@ function handleLift(totalLifts) {
       }
     });
   
-    // const floor = document.querySelector(`#${floorId}`);
+    const floor = document.querySelector(`#${floorId}`);
     const lift = document.getElementById(`${liftId}`);
     const arr = floorId.split("-");
     const floorNumber = parseInt(arr[arr.length - 1]);
