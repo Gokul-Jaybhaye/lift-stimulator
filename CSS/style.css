@@ -18,7 +18,8 @@
 }
 body {
     font-family: var(--primary-font);
-    background-color: blue;
+    background-color:lightblue;
+    
     color: var(--text-color);
     height: 100vh;
   }
@@ -92,6 +93,7 @@ body {
   }
   
   .lift {
+    
     height: 91px;
     width: 90px;
     background-color: #bce8c4;
