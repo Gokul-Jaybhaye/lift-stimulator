@@ -16,7 +16,7 @@ submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
   floorCount = floorInput.value;
   liftCount = liftInput.value;
-  if (floorCount <= 1 && floorCount>=1 || liftCount <= 1) {
+  if (floorCount <= 1  || liftCount <= 1) {
     return alert("Invalid Input, Please Try Again!!");
   }
 
@@ -92,7 +92,7 @@ function handleLift(totalLifts) {
       liftMaping.set(`lift-${i}`, 1);
       checkAvailability.set(`lift-${i}`, true);
       groundFloor.appendChild(currentLift);
-      
+
     }
   }
   
