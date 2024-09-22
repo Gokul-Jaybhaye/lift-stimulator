@@ -96,6 +96,9 @@ function handleLift(totalLifts) {
       liftMaping.set(`lift-${i}`, 0);
       checkAvailability.set(`lift-${i}`, true);
       groundFloor.appendChild(currentLift);
+      groundFloor.style.position = "absolute" ;
+
+
 
     }
   }
