@@ -81,8 +81,8 @@ body {
     gap: 2vw;
     border-top: 1px solid #000000;
     border-bottom: 1px solid #000000;
-    margin-top: 2px;
-    margin-bottom: 2px;
+    /* margin-top: 2px;
+    margin-bottom: 2px; */
   }
   
   .lift-control {
@@ -96,10 +96,13 @@ body {
 
   .lift {
    
-    height: 91px;
+    height: 100px;
     width: 100px;
     background-color: #bce8c4;
     display: flex;
+    align-items: center;
+    justify-items: center;
+    /* margin-bottom: 2px; */
     flex-direction: row;
     overflow:hidden;
     margin-right: 15px;
