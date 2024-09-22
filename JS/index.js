@@ -156,7 +156,7 @@ function handleLift(totalLifts) {
   
     setTimeout(() => {
       doorOpenClose(floorId, liftId);
-    }, transitionDuration * 100);
+    }, transitionDuration * 1000);
   
     liftMaping.set(liftId, floorNumber);
   }
