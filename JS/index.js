@@ -19,6 +19,10 @@ submitBtn.addEventListener("click", (e) => {
   if (floorCount <= 0  || liftCount <= 0) {
     return alert("Invalid Input, Please Try Again!!");
   }
+  // if(floorCount==null|| liftCount==null) {
+  //   return alert("Invalid Input, Please Try Again!!");
+
+  // }
 
   const inputSection = document.querySelector(".input__section");
   inputSection.style.display = "none";
@@ -89,7 +93,7 @@ function handleLift(totalLifts) {
         <section class="door left-door"></section>
         <section class="door right-door"></section>
       `;
-      liftMaping.set(`lift-${i}`, 1);
+      liftMaping.set(`lift-${i}`, 0);
       checkAvailability.set(`lift-${i}`, true);
       groundFloor.appendChild(currentLift);
 
@@ -149,7 +153,7 @@ function handleLift(totalLifts) {
   
     setTimeout(() => {
       doorOpenClose(floorId, liftId);
-    }, transitionDuration * 1000);
+    }, transitionDuration * 100);
   
     liftMaping.set(liftId, floorNumber);
   }
